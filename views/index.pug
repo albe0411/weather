@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Weather App
+        style
+            include ../public/style.css 
+        script(src="/script.js") 
+
+    body
+        div.main_container
+            header
+                h1=city
+                button(id="previousDay" type="button" onclick="shownDateChange('-')") <
+                h2#date=date
+                button(id="nextDay" type="button" onclick="shownDateChange('+')") >
+            div.info_container
+                if !temperatures 
+                    p="invalid date"
+                else 
+                    hr
+                    each val, index in temperatures["times"]
+                        div.time_temp_pair
+                            p=val
+                            p=temperatures["temps"][index] + "°C"
+                        hr
