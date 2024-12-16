@@ -58,7 +58,7 @@ app.get ('/', (req, res) => {
     let firstDate = new Date(`${weather["list"][0]["dt_txt"].split(' ')[0]}T${weather["list"][0]["dt_txt"].split(' ')[1]}.000Z`)
     let currentDate = new Date(firstDate.setHours(eval(`firstDate.getHours() + ${timezone}`))).toISOString().split('T')[0]
     res.render('index', {
-        'temperatures' : temperatures[currentDate], 
+        'temperatures' : temperatures[currentDate],
         'city' : weather["city"]["name"],
         'date' : currentDate
     })

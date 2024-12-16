@@ -12,6 +12,8 @@ body{
     min-width: 400px;
     max-width: 100vw;
     min-height: 100vh;
+
+
 }
 
 header{
@@ -26,6 +28,7 @@ h1{
     margin: 0;
     grid-column: 1 / 4;
     text-align: center;
+    font-size: 3rem;
 }
 
 #date{
@@ -37,6 +40,8 @@ button{
     height: fit-content;
     margin: auto;
     border-radius: 10px;
+    border-color: rgb(10, 134, 176);
+    border-style:solid;
 }
 
 button:hover{
